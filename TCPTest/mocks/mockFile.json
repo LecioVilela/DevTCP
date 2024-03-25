@@ -1,0 +1,34 @@
+﻿[
+  {
+    "timestamp": "2024-03-11T09:00:00",
+    "interval": "1m",
+    "stock_symbol": "AAPL",
+    "open_price": 150.20,
+    "close_price": 151.30,
+    "volume": 10000
+  },
+  {
+    "timestamp": "2024-03-11T09:01:00",
+    "interval": "1m",
+    "stock_symbol": "AAPL",
+    "open_price": 151.30,
+    "close_price": 152.00,
+    "volume": 12000
+  },
+  {
+    "timestamp": "2024-03-11T09:02:00",
+    "interval": "1m",
+    "stock_symbol": "AAPL",
+    "open_price": 152.00,
+    "close_price": 151.50,
+    "volume": 11000
+  },
+  {
+    "timestamp": "2024-03-11T09:03:00",
+    "interval": "1m",
+    "stock_symbol": "AAPL",
+    "open_price": 151.50,
+    "close_price": 151.80,
+    "volume": 10500
+  }
+]
