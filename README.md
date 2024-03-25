@@ -1,32 +1,32 @@
 # Financial Trading Data Processing Service
-Este é um serviço de processamento de dados em tempo real para uma plataforma de negociação financeira. O serviço recebe dados de mercado via uma conexão TCP, realiza cálculos e retorna os dados processados para o cliente. O processamento de dados é essencial para a tomada de decisões de negociação, portanto, é necessário que seja rápido e eficiente.
+Este Ã© um serviÃ§o de processamento de dados em tempo real para uma plataforma de negociaÃ§Ã£o financeira. O serviÃ§o recebe dados de mercado via uma conexÃ£o TCP, realiza cÃ¡lculos e retorna os dados processados para o cliente. O processamento de dados Ã© essencial para a tomada de decisÃµes de negociaÃ§Ã£o, portanto, Ã© necessÃ¡rio que seja rÃ¡pido e eficiente.
 
-## Visão Geral do Projeto
+## VisÃ£o Geral do Projeto
 
 ### Servidor TCP
-- Implementa um servidor TCP em C# que escuta em uma porta específica.
-- O servidor aceita pacotes de dados contendo informações do mercado (timestamp, intervalo, símbolo do estoque, preço de abertura, - preço de fechamento, volume).
-- Processa os dados, calculando médias móveis simples (SMA) e Convergência e Divergência de Médias Móveis (MACD) usando multithreading para garantir desempenho.
+- Implementa um servidor TCP em C# que escuta em uma porta especÃ­fica.
+- O servidor aceita pacotes de dados contendo informaÃ§Ãµes do mercado (timestamp, intervalo, sÃ­mbolo do estoque, preÃ§o de abertura, - preÃ§o de fechamento, volume).
+- Processa os dados, calculando mÃ©dias mÃ³veis simples (SMA) e ConvergÃªncia e DivergÃªncia de MÃ©dias MÃ³veis (MACD) usando multithreading para garantir desempenho.
 - Responde ao cliente com os dados processados.
 
-### Requisitos Técnicos
+### Requisitos TÃ©cnicos
 - Utiliza C# e .NET 8.0.
-- Configura pipelines de CI/CD no GitHub Actions para compilação, execução de testes unitários e distribuição.
-- Escreve testes unitários para a lógica de processamento de dados para garantir precisão e robustez.
-- Containeriza o aplicativo do servidor TCP usando Docker, fornecendo um Dockerfile e instruções para construir e executar o contêiner.
-- Implementa logging na aplicação para rastrear operações e erros, juntamente com monitoramento básico para observar o desempenho (tempo de resposta, throughput).
+- Configura pipelines de CI/CD no GitHub Actions para compilaÃ§Ã£o, execuÃ§Ã£o de testes unitÃ¡rios e distribuiÃ§Ã£o.
+- Escreve testes unitÃ¡rios para a lÃ³gica de processamento de dados para garantir precisÃ£o e robustez.
+- Containeriza o aplicativo do servidor TCP usando Docker, fornecendo um Dockerfile e instruÃ§Ãµes para construir e executar o contÃªiner.
+- Implementa logging na aplicaÃ§Ã£o para rastrear operaÃ§Ãµes e erros, juntamente com monitoramento bÃ¡sico para observar o desempenho (tempo de resposta, throughput).
 
 ## Estrutura do Projeto
 ```
 /
-?   ??? TCPServer.cs              # Implementação do servidor TCP
-?   ??? ...
-??? tests/
-?   ??? TCPServerTests.cs         # Testes unitários para a lógica de processamento de dados
-?   ??? ...
-??? Dockerfile                    # Arquivo Docker para containerizar o aplicativo
-??? README.md                     # Este arquivo
-??? ...
+â”‚   â”œâ”€â”€ TCPServer.cs              # ImplementaÃ§Ã£o do servidor TCP
+â”‚   â””â”€â”€ ...
+â”œâ”€â”€ tests/
+â”‚   â”œâ”€â”€ TCPServerTests.cs         # Testes unitÃ¡rios para a lÃ³gica de processamento de dados
+â”‚   â””â”€â”€ ...
+â”œâ”€â”€ Dockerfile                    # Arquivo Docker para containerizar o aplicativo
+â”œâ”€â”€ README.md                     # Este arquivo
+â””â”€â”€ ...
 ```
 
 ## Utilizacao
@@ -45,7 +45,7 @@ dotnet run --project TCPServer.csproj
 dotnet test tests/TCPServerTests.csproj
 ```
 
-4. ### Construir e Executar o Contêiner Docker:
+4. ### Construir e Executar o ContÃªiner Docker:
 ```
 docker build -t tcp-server .
 docker run -p 8080:8080 tcp-server
