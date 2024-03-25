@@ -94,7 +94,7 @@ namespace DevTCP
         /// </summary>
         /// <param name="prices">The prices.</param>
         /// <returns>A double.</returns>
-        public double CalculateSMA(IEnumerable<double> prices)
+        public static double CalculateSMA(IEnumerable<double> prices)
         {
             return prices.TakeLast(5).Average();
         }
@@ -104,7 +104,7 @@ namespace DevTCP
         /// </summary>
         /// <param name="prices">The prices.</param>
         /// <returns>A double.</returns>
-        public double CalculateMACD(double[] prices)
+        public static double CalculateMACD(double[] prices)
         {
             var shortTermEMA = prices.TakeLast(5).Average();
             var longTermEMA = prices.TakeLast(10).Average();
