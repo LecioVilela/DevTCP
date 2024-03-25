@@ -78,7 +78,7 @@ namespace TCPTest
         public void TestCalculateSMAWithNegativePrices()
         {
             // Arrange
-            double[] prices = { -10, -15, -20, -25, -30 };
+            double[] prices = [-10, -15, -20, -25, -30];
 
             // Act
             var result = TCPServer.CalculateSMA(prices);
